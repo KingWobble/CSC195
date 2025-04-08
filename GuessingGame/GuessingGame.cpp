@@ -4,28 +4,52 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include "Game.h"
 using namespace std;
 
 int main()
 {
-    unsigned int low;
-    unsigned int up;
-    unsigned int theAnswer;
-    unsigned int guessesLeft;
+    char playAgain = 'y';
 
-    cout << "Enter a number to be the minimum: ";
-    cin >> low;
-    cout << " Enter a number to be the maximum: ";
-    cin >> up;
+    while (playAgain == 'y' || playAgain == 'Y') {
+        GuessingGame game;
+        game.setBounds();
 
-    if (low >= up) {
-        cout << "Minumum number must be less than the maximum number pal.";
-            return;
+        while (game.remainingGuesses()) {
+            int guess;
+            std::cout << "Enter your guess: ";
+            cin >> guess;
+
+            string result = game.checkGuess(guess);
+
+            if (result == "correct") {
+
+                std::cout << "You got it right! Yippee!" << endl;
+                break;
+            }
+            else if (result == "toolow") {
+                std::cout << "Too Low!!!" << endl;
+            }
+            else if (result == "toohigh") {
+                std::cout << "Too High!!!" << endl;
+            }
+            else if (result == "noguessleft") {
+                std::cout << " Out of guesses! The answer was " << game.getAnswer() << ". Better luck next time!" << endl;
+                break;
+            }
+
+            std::cout << "Guesses left: " << game.getGuessesLeft() << endl;
+        }
+
+        
+
+        std::cout << "\n Would you like to play again? (y/n): ";
+        cin >> playAgain;
+        std::cout << endl;
     }
 
-
-
-
+    std::cout << "Thanks for playing!" << endl;
+    return 0;
 
 
 }
