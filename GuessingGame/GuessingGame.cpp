@@ -15,43 +15,37 @@ int main()
         GuessingGame game;
         game.setBounds();
 
-        while (game.remainingGuesses()) {
-            int guess;
-            std::cout << "Enter your guess: ";
-            cin >> guess;
+        int playerGuess;
+        std::string result;
 
-            string result = game.checkGuess(guess);
+        while (game.remainingGuesses()) {
+            std::cout << "Enter your guess: ";
+            std::cin >> playerGuess;
+            result = game.checkGuess(playerGuess);
 
             if (result == "correct") {
-
-                std::cout << "You got it right! Yippee!" << endl;
+                std::cout << "You guessed correctly! The answer was: " << game.getAnswer() << std::endl;
                 break;
             }
             else if (result == "toolow") {
-                std::cout << "Too Low!!!" << endl;
+                std::cout << "Too low Pal! Try again." << std::endl;
             }
             else if (result == "toohigh") {
-                std::cout << "Too High!!!" << endl;
+                std::cout << "Too high Amigo! Try again." << std::endl;
             }
-            else if (result == "noguessleft") {
-                std::cout << " Out of guesses! The answer was " << game.getAnswer() << ". Better luck next time!" << endl;
-                break;
-            }
-
-            std::cout << "Guesses left: " << game.getGuessesLeft() << endl;
         }
 
-        
+        if (result != "correct") {
+            std::cout << "Out of guesses! The correct answer was: " << game.getAnswer() << std::endl;
+        }
 
-        std::cout << "\n Would you like to play again? (y/n): ";
+        cout << "\nWould you like to play again? (y/n): ";
         cin >> playAgain;
-        std::cout << endl;
+        cout << endl;
+
     }
-
-    std::cout << "Thanks for playing!" << endl;
+    cout << "Thanks for playing!" << endl;
     return 0;
-
-
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

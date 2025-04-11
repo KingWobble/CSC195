@@ -13,6 +13,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UserDataTypesImage", "UserD
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UserDataTypes", "UserDataTypes\UserDataTypes.vcxproj", "{B1B9CCDB-A273-45D9-8684-3C13E092601C}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MemoryReview", "MemoryReview\MemoryReview.vcxproj", "{49555C7A-A15A-4DFC-A065-E6BEAF480A72}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -61,6 +63,14 @@ Global
 		{B1B9CCDB-A273-45D9-8684-3C13E092601C}.Release|x64.Build.0 = Release|x64
 		{B1B9CCDB-A273-45D9-8684-3C13E092601C}.Release|x86.ActiveCfg = Release|Win32
 		{B1B9CCDB-A273-45D9-8684-3C13E092601C}.Release|x86.Build.0 = Release|Win32
+		{49555C7A-A15A-4DFC-A065-E6BEAF480A72}.Debug|x64.ActiveCfg = Debug|x64
+		{49555C7A-A15A-4DFC-A065-E6BEAF480A72}.Debug|x64.Build.0 = Debug|x64
+		{49555C7A-A15A-4DFC-A065-E6BEAF480A72}.Debug|x86.ActiveCfg = Debug|Win32
+		{49555C7A-A15A-4DFC-A065-E6BEAF480A72}.Debug|x86.Build.0 = Debug|Win32
+		{49555C7A-A15A-4DFC-A065-E6BEAF480A72}.Release|x64.ActiveCfg = Release|x64
+		{49555C7A-A15A-4DFC-A065-E6BEAF480A72}.Release|x64.Build.0 = Release|x64
+		{49555C7A-A15A-4DFC-A065-E6BEAF480A72}.Release|x86.ActiveCfg = Release|Win32
+		{49555C7A-A15A-4DFC-A065-E6BEAF480A72}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
