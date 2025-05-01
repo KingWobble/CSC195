@@ -13,7 +13,7 @@ namespace mathlib {
 	public:
 		Fraction(T num = 0, T denom = 1);
 
-		void Simplify();
+		
 		double toDouble() const;
 
 		Fraction operator+ (const Fraction& other) const;
@@ -62,13 +62,8 @@ namespace mathlib {
 	}
 
 	template<typename T>
-	void Fraction<T>::Simplify() {
-		simplify();
-	}
-
-	template<typename T>
 	double Fraction<T>::toDouble() const {
-		return static_cast<double>(numerator) / denominator;
+		return static_cast<double> (numerator) / denominator;
 	}
 
 	template<typename T>
@@ -89,7 +84,7 @@ namespace mathlib {
 	}
 
 	template<typename T>
-	Fraction<T> Fraction<T>::operator/(const Fraction& other) const {
+	 Fraction<T> Fraction<T>::operator/(const Fraction& other) const {
 		return Fraction(numerator * other.denominator, denominator * other.numerator);
 	}
 
@@ -135,7 +130,7 @@ namespace mathlib {
 		is >> f.numerator >> slash >> f.denominator;
 		if (f.denominator == 0) f.denominator = 1;
 		
-		f.Simplify();
+		f.simplify();
 
 		return is;
 	}
