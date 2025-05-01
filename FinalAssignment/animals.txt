@@ -1,9 +1,0 @@
-1
-Name: Name:
-Lifespan: 0
-1
-Name: luke
-Lifespan: 7
-2
-Name: whiskers
-Lifespan: 9
